@@ -11,7 +11,7 @@ process.options = cms.untracked.PSet(wantSummary = cms.untracked.bool(True))
 
 # Source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/data/Run2015C_25ns/SingleMuon/AOD/16Dec2015-v1/00000/62275A51-C5AF-E511-A27B-0CC47A4D76BE.root')
+    fileNames = cms.untracked.vstring('/store/data/Run2015D/SingleMuon/AOD/16Dec2015-v1/10000/06CC1B3A-FDA7-E511-B02B-00259073E388.root')
 )
 
 # Geometry and Detector Conditions
@@ -25,7 +25,7 @@ import CommonFSQFramework.Core.customizePAT
 process = CommonFSQFramework.Core.customizePAT.customize(process)
 process = CommonFSQFramework.Core.customizePAT.customizeGT(process)
 
-import CommonFSQFramework.Core.MuonTrackViewsConfigs
+import CommonFSQFramework.Core.MuonViewsConfigs
 import CommonFSQFramework.Core.METViewsConfigs
 import CommonFSQFramework.Core.VerticesViewsConfigs
 

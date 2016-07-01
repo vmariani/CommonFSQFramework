@@ -23,7 +23,7 @@ EventViewBase(iConfig,  tree)
 
  m_maxEta = iConfig.getParameter<double>("maxEta");
  m_minPt = iConfig.getParameter<double>("minPt");
-
+ m_inputCol = iConfig.getParameter<edm::InputTag>("muons");
  // register consumes
  iC.consumes< std::vector<reco::Vertex> >(edm::InputTag("offlinePrimaryVerticesWithBS"));
  iC.consumes< std::vector<reco::Muon> >(m_inputCol);  
@@ -59,7 +59,6 @@ void MuonView::fillSpecific(const edm::Event& iEvent, const edm::EventSetup& iSe
   }
  }
  if (goodvertex == false) return; // leaves empty tracks collection (filled below)
-
  edm::Handle<std::vector<reco::Muon> > hIn;
  iEvent.getByLabel(m_inputCol, hIn);
  float dz = 0;

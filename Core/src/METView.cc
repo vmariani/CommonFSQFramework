@@ -14,13 +14,12 @@ EventViewBase(iConfig,  tree)
 
  m_maxEta = iConfig.getParameter<double>("maxEta");
  m_minPt = iConfig.getParameter<double>("minPt");
-
+ m_inputCol = iConfig.getParameter<edm::InputTag>("pfMET");
  // register consumes
  iC.consumes< std::vector<reco::Vertex> >(edm::InputTag("offlinePrimaryVerticesWithBS"));
  iC.consumes< std::vector<reco::PFMET> >(m_inputCol);  
     
 }
-
 void METView::fillSpecific(const edm::Event& iEvent, const edm::EventSetup& iSetup){
 
  edm::Handle<std::vector<reco::PFMET> > hIn;
