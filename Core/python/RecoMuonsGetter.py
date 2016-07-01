@@ -8,6 +8,6 @@ class RecoTracksGetter(BaseGetter.BaseGetter): #con il primo cerca nella cartell
 
     # Note: use the most used branch (so performance wont suffer from reading otherwise unused stuff)
     def getSize(self):
-        srcBranch = "recoTracksp4"
+        srcBranch = "muons_p4"
         return getattr(self.chain, srcBranch).size()
 
