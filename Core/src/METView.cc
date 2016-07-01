@@ -14,7 +14,7 @@ EventViewBase(iConfig,  tree)
 
  m_maxEta = iConfig.getParameter<double>("maxEta");
  m_minPt = iConfig.getParameter<double>("minPt");
- m_inputCol = iConfig.getParameter<edm::InputTag>("pfMET");
+ m_inputCol = iConfig.getParameter<edm::InputTag>("pfMet");
  // register consumes
  iC.consumes< std::vector<reco::Vertex> >(edm::InputTag("offlinePrimaryVerticesWithBS"));
  iC.consumes< std::vector<reco::PFMET> >(m_inputCol);  

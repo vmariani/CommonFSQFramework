@@ -10,7 +10,7 @@ def get(todo):
         maxEta = cms.double(2.5),
         maxDZ  = cms.double(15),
         minPt = cms.double(10),
-        tracks = cms.InputTag("pfMET")
+        tracks = cms.InputTag("pfMet")
     )
 
  
