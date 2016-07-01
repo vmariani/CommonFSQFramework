@@ -4,13 +4,13 @@ def get(todo):
     defs = {}
 
     # RecoTrackView
-    defs["RecoMuonView"]  = cms.PSet(
-        miniView = cms.string("RecoMuonView"),
-        branchPrefix = cms.untracked.string("recoMuon"),
+    defs["METView"]  = cms.PSet(
+        miniView = cms.string("METView"),
+        branchPrefix = cms.untracked.string("reco"),
         maxEta = cms.double(2.5),
         maxDZ  = cms.double(15),
         minPt = cms.double(10),
-        tracks = cms.InputTag("Muons")
+        tracks = cms.InputTag("PFMET")
     )
 
  

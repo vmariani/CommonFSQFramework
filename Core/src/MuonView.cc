@@ -87,7 +87,7 @@ void MuonView::fillSpecific(const edm::Event& iEvent, const edm::EventSetup& iSe
   if (isMedium == false) continue;
   // Note: all fills (below) should be done consistently after all cuts are applied
   iso = (hIn->at(i).pfIsolationR04().sumChargedHadronPt + std::max(0., hIn->at(i).pfIsolationR04().sumNeutralHadronEt + hIn->at(i).pfIsolationR04().sumPhotonEt - 0.5*hIn->at(i).pfIsolationR04().sumPUPt))/hIn->at(i).pt();
-  if(isLoose == true){  
+  if(isLoose == true || isMedium == true || isTight == true){  
    addToP4Vec("p4", reco::Candidate::LorentzVector(px,py,pz,E));
    addToFVec("dxy", dxy);
    addToFVec("dz", dz);
