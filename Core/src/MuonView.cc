@@ -26,7 +26,7 @@ EventViewBase(iConfig,  tree)
  m_inputCol = iConfig.getParameter<edm::InputTag>("muons");
  // register consumes
 
- iC.consumes< std::vector<reco::BeamSpot> >(edm::InputTag("offlineBeamSpot"));
+ iC.consumes<reco::BeamSpot> (edm::InputTag("offlineBeamSpot"));
  iC.consumes< std::vector<reco::Vertex> >(edm::InputTag("offlinePrimaryVerticesWithBS"));
  iC.consumes< std::vector<reco::Muon> >(m_inputCol);  
     
