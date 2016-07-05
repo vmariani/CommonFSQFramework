@@ -9,7 +9,7 @@
 METView::METView(const edm::ParameterSet& iConfig, TTree * tree, edm::ConsumesCollector && iC):
 EventViewBase(iConfig,  tree)
 {
- registerVecP4("MET_p4", tree);
+ registerVecP4("p4", tree);
  registerVecFloat("abspT", tree);
 
  m_maxEta = iConfig.getParameter<double>("maxEta");
